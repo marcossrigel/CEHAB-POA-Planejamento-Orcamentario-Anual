@@ -14,7 +14,7 @@ body {
 
 .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
@@ -64,7 +64,7 @@ body {
   padding: 2rem 1rem;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .input-wrapper {
@@ -81,17 +81,30 @@ body {
   font-size: 20px;
 }
 
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: white;
+}
+
+.input-wrapper .material-icons {
+  margin-right: 8px;
+  color: #aaa;
+}
+
 .inputs {
-  padding: 15px;
   border: none;
   outline: none;
   flex: 1;
   font-size: 16px;
-  color: var(--color-dark);
+  background: transparent;
 }
 
-.inputs:focus {
-  box-shadow: 0 0 0 2px var(--color-gray);
+.input-wrapper:focus-within {
+  border: 2px solid #1a73e8;
 }
 
 .btn {
