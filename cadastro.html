@@ -3,28 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>POA - Planejamento Orçamentário Anual</title>
+  <link rel="stylesheet" href="StyleCadastro.css">
+  <title>Cadastre-se</title>
   
 </head>
 <body>
-
-  <div class="content">
-    
-    <div class="content-info">
-    <div class="content-login">
-      <form class="content-login-box">
-        <div class="input-wrapper">
-          <input type="text" class="inputs" placeholder="Nome">
-        </div>
-        <div class="input-wrapper">
-          <input type="password" class="inputs" placeholder="Sobrenome">
-        </div>
-        <button class="btn btn-create-account">Criar nova conta</button>
-      </form>
+  <form class="formulario">
+    <h1>Cadastre-se</h1>
+    <div class="linha">
+      <input type="text" placeholder="Nome" class="campo">
+      <input type="text" placeholder="Sobrenome" class="campo">
     </div>
 
+    <h6>Data de nascimento</h6>
+    <div class="linha">
+      <select class="campo">
+        <option disabled selected>Dia</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+      </select>
+
+      <select class="campo">
+        <option disabled selected>Mês</option>
+        <option>jan</option>
+        <option>fev</option>
+        <option>mar</option>
+        <option>abr</option>
+        <option>mai</option>
+        <option>jun</option>
+        <option>jul</option>
+        <option>ago</option>
+        <option>set</option>
+        <option>out</option>
+        <option>nov</option>
+        <option>dez</option>
+      </select>
+
+      <select class="campo">
+        <option disabled selected>Ano</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+        <option>2022</option>
+        <option>2021</option>
+        <option>1950</option>
+      </select>
+    </div>
+
+  <label class="label"><h6>Gênero</h6></label>
+  <div class="linha-genero">
+  <label class="genero-opcao">
+  <input type="radio" name="genero" value="feminino">
+    Feminino
+  </label>
+
+  <label class="genero-opcao">
+  <input type="radio" name="genero" value="masculino">
+    Masculino
+  </label>
+
+  <label class="genero-opcao">
+  <input type="radio" name="genero" value="personalizado">
+    Personalizado
+  </label>
   </div>
 
+  <div id="campo-genero-personalizado" style="display: none; margin-top: 10px;">
+    <input type="text" placeholder="Qual o seu gênero?" class="campo"> 
+  </div>
+<br>
+  <div class="linha">
+    <input type="email" name="email" class="campo" placeholder="Email">
+  </div>
+  <div class="linha">
+    <input type="password" name="senha" class="campo" placeholder="Senha">
+  </div>
+
+  <hr>
+    <button class="btn btn-create-account">Criar nova conta</button>
+  </form>
+
+  <script>
+    const radiosGenero = document.querySelectorAll('input[name="genero"]');
+    const campoPersonalizado = document.getElementById('campo-genero-personalizado');
+  
+    radiosGenero.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === 'personalizado') {
+          campoPersonalizado.style.display = 'block';
+        } else {
+          campoPersonalizado.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
