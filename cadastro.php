@@ -1,3 +1,47 @@
+<?php
+
+  if(isset($_POST['submit']))
+  {
+    // print_r($_POST['nome']);
+    // print_r('<br>');
+    // print_r($_POST['sobrenome']);
+    // print_r('<br>');
+    // print_r($_POST['dia']);
+    // print_r('<br>');
+    // print_r($_POST['mes']);
+    // print_r('<br>');
+    // print_r($_POST['ano']);
+    // print_r('<br>');
+    // print_r($_POST['genero']);
+    // print_r('<br>');
+    // print_r($_POST['email']);
+    // print_r('<br>');
+    // print_r($_POST['senha']);
+
+    include_once('config.php');
+
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    $dia = $_POST['dia'];
+    $mes = $_POST['mes'];
+    $ano = $_POST['ano'];
+    $genero = $_POST['genero'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $meses = [
+      "jan" => "01", "fev" => "02", "mar" => "03", "abr" => "04",
+      "mai" => "05", "jun" => "06", "jul" => "07", "ago" => "08",
+      "set" => "09", "out" => "10", "nov" => "11", "dez" => "12"
+    ];
+    $mesConvertido = $meses[strtolower($mes)] ?? "01";
+    $data_nascimento = "$ano-$mesConvertido-$dia";
+
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, sobrenome, data_nascimento, genero, email, senha) VALUES('$nome', '$sobrenome', '$data_nascimento', '$genero', '$email', '$senha')");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,11 +53,11 @@
 </head>
 
 <body>
-  <form class="formulario" action="processa.php" method="POST">
+  <form class="formulario" action="cadastro.php" method="POST">
     <h1>Criar uma nova conta</h1>
     <div class="linha">
-      <input type="text" placeholder="Nome" class="campo">
-      <input type="text" placeholder="Sobrenome" class="campo">
+      <input type="text" name="nome" placeholder="Nome" class="campo">
+      <input type="text" name="sobrenome" placeholder="Sobrenome" class="campo">
     </div>
 
     <br>
@@ -162,8 +206,7 @@
   <div class="linha">
     <input type="password" name="senha" class="campo" placeholder="Senha">
   </div>
-
-    <button class="btn btn-create-account">Criar nova conta</button>
+    <button type="submit" name="submit" id="submit" class="btn btn-create-account">Criar nova conta</button>
     <p class="texto-login">ou já possui uma conta?</p>
 
   </form>
