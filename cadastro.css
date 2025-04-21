@@ -8,7 +8,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f6f7;
+  background-color: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,11 +19,10 @@ body {
   display: block;
   font-size: 14px;
   color: #333;
-  margin-bottom: 4px;  /* era 10px, agora mais colado */
+  margin-bottom: 4px;
   margin-left: 2px;
   font-weight: bold;
 }
-
 
 .linha {
   display: flex;

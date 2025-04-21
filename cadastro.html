@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="StyleCadastro.css">
+  <link rel="stylesheet" href="cadastro.css">
 
   <title>Cadastre-se</title>
 </head>
 
 <body>
-  <form class="formulario">
+  <form class="formulario" action="processa.php" method="POST">
     <h1>Criar uma nova conta</h1>
     <div class="linha">
       <input type="text" placeholder="Nome" class="campo">
@@ -19,7 +19,7 @@
     <br>
     <label class="label">Data de nascimento</label>
     <div class="linha">
-      <select class="campo">
+      <select name="dia" class="campo">
         <option disabled selected>Dia</option>
         <option>1</option>
         <option>2</option>
@@ -54,7 +54,7 @@
         <option>31</option>
       </select>
 
-      <select class="campo">
+      <select name="mes" class="campo">
         <option disabled selected>Mês</option>
         <option>jan</option>
         <option>fev</option>
@@ -70,18 +70,70 @@
         <option>dez</option>
       </select>
 
-      <select class="campo">
+      <select name="ano" class="campo">
         <option disabled selected>Ano</option>
         <option>2025</option>
         <option>2024</option>
         <option>2023</option>
         <option>2022</option>
         <option>2021</option>
-        <option>1950</option>
+        <option>2020</option>
+        <option>2019</option>
+        <option>2018</option>
+        <option>2017</option>
+        <option>2016</option>
+        <option>2015</option>
+        <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
+        <option>2011</option>
+        <option>2010</option>
+        <option>2009</option>
+        <option>2008</option>
+        <option>2007</option>
+        <option>2006</option>
+        <option>2005</option>
+        <option>2004</option>
+        <option>2003</option>
+        <option>2002</option>
+        <option>2001</option>
+        <option>2000</option>
+        <option>1999</option>
+        <option>1998</option>
+        <option>1997</option>
+        <option>1996</option>
+        <option>1995</option>
+        <option>1994</option>
+        <option>1993</option>
+        <option>1992</option>
+        <option>1991</option>
+        <option>1990</option>
+        <option>1989</option>
+        <option>1988</option>
+        <option>1987</option>
+        <option>1986</option>
+        <option>1985</option>
+        <option>1984</option>
+        <option>1983</option>
+        <option>1982</option>
+        <option>1981</option>
+        <option>1980</option>
+        <option>1979</option>
+        <option>1978</option>
+        <option>1977</option>
+        <option>1976</option>
+        <option>1975</option>
+        <option>1974</option>
+        <option>1973</option>
+        <option>1972</option>
+        <option>1971</option>
+        <option>1970</option>
+        <option>1969</option>
+        <option>1968</option>
       </select>
     </div>
     <br>
-    
+
     <label class="label">Gênero</label>
   <div class="linha-genero">
   <label class="genero-opcao">
@@ -101,7 +153,7 @@
   </div>
 
   <div id="campo-genero-personalizado" style="display: none; margin-top: 10px;">
-    <input type="text" placeholder="Qual o seu gênero?" class="campo"> 
+    <input type="text" name="genero_personalizado" placeholder="Qual o seu gênero?" class="campo"> 
   </div>
   <br>
   <div class="linha">
