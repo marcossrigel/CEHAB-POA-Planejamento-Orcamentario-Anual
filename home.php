@@ -33,7 +33,9 @@
         <button class="btn btn-enter">Entrar</button>
         <a href="#" class="forgot-password">Esqueceu a senha?</a>
         <hr>
-        <button class="btn btn-create-account">Criar nova conta</button>
+        <button type="button" onclick="window.location.href='cadastro.php'" class="btn btn-create-account">
+          Criar nova conta
+        </button>
       </form>
     </div>
 

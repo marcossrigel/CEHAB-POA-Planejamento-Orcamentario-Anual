@@ -207,7 +207,10 @@
     <input type="password" name="senha" class="campo" placeholder="Senha">
   </div>
     <button type="submit" name="submit" id="submit" class="btn btn-create-account">Criar nova conta</button>
-    <p class="texto-login">ou já possui uma conta?</p>
+    
+    <p class="texto-login">
+      <a href="home.php">ou já possui uma conta?</a>
+    </p>
 
   </form>
 
