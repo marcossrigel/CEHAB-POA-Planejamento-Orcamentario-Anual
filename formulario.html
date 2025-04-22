@@ -108,18 +108,32 @@
 
     <div class="linha-atividade">
         <div class="coluna-textarea">
-          <label for="atividade">Objeto / Atividade</label>
+          <label class="label">Objeto / Atividade</label>
           <textarea id="atividade" name="atividade" placeholder="Digite o objeto ou atividade"></textarea>
         </div>
       
         <div class="coluna-campos">
+
           <div class="campo-pequeno">
-            <label for="status">Ação</label>
-            <input type="text" id="status" name="status" value="Continuidade">
+            <label class="label">Ação</label>
+            <select id="dea" name="dea">
+                <option>Selecione...</option>
+                <option>2904 - Formulação e Promoção Da Política de Regularização Fundiária</option>
+                <option>2928 - Conservação do Patrimônio Público na Companhia Estadual de Habilitação e Obras - CEHAB</option>
+                <option>2998 - Encargos Gerais da Companhia Estadual de Habilitação e Obras - CEHAB</option>
+                <option>3902 - Fomento e Apoio ao Conselho Estadual de Habilitação de Interesse Social - CEHIS</option>
+                <option>3927 - Manutenção da Ouvidoria da Companhia Estadual de Habilitação e Obras - CEHAB</option>
+                <option>4058 - Ampliação da Oferta e Requalificação de Habitação de Interesse Social</option>
+                <option>4300 - Execução de Obras de Infraestrutura e de Urbanização</option>
+                <option>4301 - Pesquisa e Assessoria Técnica para Habitação de Interesse Social</option>
+                <option>4354 - Gestão das Atividades da Companhia Estadual de Habitação e Obras - CEHAB</option>
+                <option>4587 - Contribuições Patronais da CEHAB</option>
+                <option>4613 - Encargos com o PIS e o COFINS da Companhia Estadual de Habitação e Obras - CHEAB</option>
+              </select>
           </div>
       
           <div class="campo-pequeno">
-            <label for="dea">Sub-Ação</label>
+            <label class="label">Sub-Ação</label>
             <select id="dea" name="dea">
               <option>Selecione...</option>
             </select>
@@ -128,6 +142,7 @@
       </div>
 
   <br>
+
   <div class="linha">
     <select name="FichaFinanceira" class="campo">
         <option>Selecione</option>
