@@ -131,46 +131,52 @@ text-decoration: underline;
 }
 
 .linha-atividade {
-display: flex;
-gap: 20px;
-margin-top: 20px;
-align-items: flex-start;
-flex-wrap: wrap;
-}
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
 
 .coluna-textarea {
-flex: 2;
-display: flex;
-flex-direction: column;
-}
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
 
 .coluna-textarea textarea {
-width: 100%;
-height: 100px;
-padding: 10px;
-border-radius: 8px;
-border: 1px solid #ccc;
-resize: vertical;
-}
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 14px;
+    font-family: inherit;
+  }
 
 .coluna-campos {
-flex: 1;
-display: flex;
-flex-direction: column;
-gap: 15px;
-}
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.campo-pequeno {
+    display: flex;
+    flex-direction: column;
+  }
 
 .campo-pequeno label {
-font-weight: bold;
-margin-bottom: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .campo-pequeno input,
 .campo-pequeno select {
-width: 100%;
-padding: 10px;
-border-radius: 8px;
-border: 1px solid #ccc;
-font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
