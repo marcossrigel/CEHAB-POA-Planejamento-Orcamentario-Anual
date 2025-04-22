@@ -69,8 +69,6 @@
       </div>
     </div>
     
-    <br>
-    
     <div class="linha">
       <div class="campo-pequeno">
         <label class="label">Status</label>
@@ -97,36 +95,44 @@
       </div>
     </div>
 
+    <div class="linha">
+      <div class="campo-pequeno">
         <label class="label">DEA</label>
-        <div class="linha">
         <select name="DEA" id="" class="campo">
             <option>Selecione</option>
             <option>Sim</option>
             <option>Não</option>
         </select>
+      </div>
 
+      <div class="campo-pequeno">
+        <label class="label">Reajuste</label>
         <select name="Reajuste" id="" class="campo">
             <option>Selecione</option>
             <option>Sim</option>
             <option>Não</option>
         </select>
+      </div>
 
+      <div class="campo-pequeno">
+        <label class="label">Fonte</label>
         <select name="Fonte" id="" class="campo">
             <option>Selecione</option>
             <option>0500 - (Tesouro do Estado)</option>
             <option>0700 - (Repasse de Convênio)</option>
             <option>0754 - (Operação de Crédito)</option>
         </select>
+      </div>
 
+      <div class="campo-pequeno">
+        <label class="label">Grupo</label>
         <select name="Grupo" id="" class="campo">
             <option>Selecione</option>
             <option>3 - Despesa Corrente</option>
             <option>4 - Investimentos</option>
         </select>
-
-        </div>
-
-    <br>
+      </div>
+    </div>
 
     <div class="linha-atividade">
         <div class="coluna-textarea">
@@ -198,6 +204,8 @@
   <br>
 
   <div class="linha">
+    <div class="campo-pequeno">
+      <label class="label">Ficha Financeira</label>
     <select name="FichaFinanceira" class="campo">
         <option>Selecione</option>
         <option>G3 - Água e Esgoto</option>
@@ -235,7 +243,10 @@
         <option>G3 - Vigilância Ostensiva</option>
         <option>G4 - Supervisão de Obras</option>
     </select>
+    </div>
 
+    <div class="campo-pequeno">
+      <label class="label">Macro Tema</label>
     <select name="Macro Tema" class="campo">
         <option>Selecione</option>
         <option>SUPORTE A GESTÃO</option>
@@ -248,7 +259,10 @@
         <option>OBRAS</option>
         <option>OPERAÇÕES DE CRÉDITO</option>
     </select>
+    </div>
 
+    <div class="campo-pequeno">
+      <label class="label">Grau de Priorização</label>
     <select name="Grau de Priorização" class="campo">
         <option>Selecione</option>
         <option>Grau Alto</option>
@@ -258,6 +272,7 @@
         <option>Grau Baixo</option>
     </select>
     </div>
+  </div>
 
     <button type="submit" name="submit" id="submit" class="btn btn-create-account">Fazer Contrato</button>  
     <p class="texto-login">Cancelar</p>
