@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="formulario.css">
+
+  <title>Formulario POA 2025</title>
+</head>
+
+<body>
+  <form class="formulario" action="cadastro.html" method="POST">
+    <h1>Formulário POA 2025</h1>
+    
+    <label class="label">Tema de Custo</label>
+    <div class="linha">
+        <select name="TemaCusto" id="1" class="campo">
+            <option>Selecione...</option>
+            <option>01 - Apoio Administrativo - Estagiários</option>
+            <option>02 - Combustível/Manutenção de Veículos</option>
+            <option>03 - Demandas Judiciais</option>
+            <option>04 - Diárias Civil</option>
+            <option>05 - Limpeza e Conservação</option>
+            <option>06 - Locação de Veículos</option>
+            <option>07 - Manutenção Predial</option>
+            <option>08 - Material de Expediente/Copa/Limpeza/Gráfico</option>
+            <option>09 - Motoristas</option>
+            <option>10 - Salário de Apenados</option>
+            <option>11 - Rede Digital Corporativa do Estado</option>
+            <option>12 - Serviços de Portaria</option>
+            <option>13 - Serviços de Informática</option>
+            <option>14 - Suprimento Individual</option>
+            <option>15 - Vigilância Ostensiva</option>
+            <option>16 - Auxílio Moradia</option>
+            <option>17 - Cota Global</option>
+            <option>18 - Passagens Aéreas</option>
+            <option>19 - Energia Elétrica</option>
+            <option>20 - Água e Esgoto</option>
+            <option>21 - Outros</option>
+            <option>22 - Folha de Pessoal</option>
+            <option>23 - FGTS</option>
+            <option>24 - INSS</option>
+            <option>25 - Ressarcimento Pessoal à Disposição</option>
+            <option>26 - Obras</option>
+            <option>27 - Gerenciamento de Obras</option>
+            <option>28 - Projetos de Obras</option>
+            <option>29 - Regularização Fundiária</option>
+            <option>30 - Ouvidoria</option>
+        </select>
+        
+        <select name="SetorResponsavel" id="2" class="campo">
+            <option>DAF (GAD)</option>
+            <option>DOB</option>
+            <option>DOE</option>
+            <option>SPO</option>
+            <option>DP (PESSOAL)</option>
+            <option>DPH</option>
+            <option>SAJ</option>
+        </select>
+
+        <input type="text" name="GestorResponsavel" placeholder="Digite o nome do Gestor" class="campo">
+    </div>
+    
+    <br>
+    <label class="label">Status</label>
+        <div class="linha">
+        <select name="Status" id="" class="campo">
+            <option>Selecione</option>
+            <option>Continuidade</option>
+            <option>Novo</option>
+        </select>
+
+        <input type="text" name="NumeroCredor" placeholder="Digite o numero do contrato" class="campo">
+        <input type="text" name="NomeCredor" placeholder="Digite o nome do credor" class="campo">
+        <input type="text" name="VigenciaContrato" placeholder="Digite a vigência do contrato" class="campo">
+        </div>
+
+        <label class="label">DEA</label>
+        <div class="linha">
+        <select name="DEA" id="" class="campo">
+            <option>Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+        </select>
+
+        <select name="Reajuste" id="" class="campo">
+            <option>Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+        </select>
+
+        <select name="Fonte" id="" class="campo">
+            <option>Selecione</option>
+            <option>0500 - (Tesouro do Estado)</option>
+            <option>0700 - (Repasse de Convênio)</option>
+            <option>0754 - (Operação de Crédito)</option>
+        </select>
+
+        <select name="Grupo" id="" class="campo">
+            <option>Selecione</option>
+            <option>3 - Despesa Corrente</option>
+            <option>4 - Investimentos</option>
+        </select>
+
+        </div>
+
+    <br>
+
+    <div class="linha-atividade">
+        <div class="coluna-textarea">
+          <label for="atividade">Objeto / Atividade</label>
+          <textarea id="atividade" name="atividade" placeholder="Digite o objeto ou atividade"></textarea>
+        </div>
+      
+        <div class="coluna-campos">
+          <div class="campo-pequeno">
+            <label for="status">Ação</label>
+            <input type="text" id="status" name="status" value="Continuidade">
+          </div>
+      
+          <div class="campo-pequeno">
+            <label for="dea">Sub-Ação</label>
+            <select id="dea" name="dea">
+              <option>Selecione...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+  <br>
+  <div class="linha">
+    <select name="FichaFinanceira" class="campo">
+        <option>Selecione</option>
+        <option>G3 - Água e Esgoto</option>
+        <option>G3 - Apoio Administrativo - Estagiários</option>
+        <option>G3 - Auxílio Funeral</option>
+        <option>G3 - Auxílio Moradia</option>
+        <option>G3 - Auxílio Moradia - Operação Prontidão</option>
+        <option>G3 - Combustível/Manutenção Veículos</option>
+        <option>G3 - Cota Global</option>
+        <option>G3 - Demandas Judiciais</option>
+        <option>G4 - Devolução - Recursos do Concedente</option>
+        <option>G3 - Diárias Civil</option>
+        <option>G3 - Energia Elétrica</option>
+        <option>G1 - FGTS</option>
+        <option>G3 - Fornecimento de Passagens</option>
+        <option>G1 - INSS</option>
+        <option>G3 - Limpeza e Conservação</option>
+        <option>G3 - Locomoção de Veículos</option>
+        <option>G3 - Manutenção Predial</option>
+        <option>G3 - Material de Expediente/Copa/Limpeza/Gráfico</option>
+        <option>G3 - Motoristas</option>
+        <option>G4 - Obra</option>
+        <option>G4 - Operação de Crédito</option>
+        <option>G4 - Outros</option>
+        <option>G3 - Outros</option>
+        <option>G1 - Pessoal e Encargos Sociais</option>
+        <option>G3 - Publicações Oficiais</option>
+        <option>G4 - Recursos do Concedente</option>
+        <option>G3 - Rede Digital Corporativa do Estado</option>
+        <option>G1 - Ressarcimento Pessoal à Disposição</option>
+        <option>G3 - Salário de Apenados</option>
+        <option>G3 - Serviços de Informática</option>
+        <option>G3 - Serviços de Portaria</option>
+        <option>G3 - Suprimento Individual</option>
+        <option>G3 - Vigilância Ostensiva</option>
+        <option>G4 - Supervisão de Obras</option>
+    </select>
+
+    <select name="Macro Tema" class="campo">
+        <option>Selecione</option>
+        <option>SUPORTE A GESTÃO</option>
+        <option>MÃO DE OBRA TERCEIRIZADA</option>
+        <option>OUTROS</option>
+        <option>AUXÍLIO</option>
+        <option>FROTA</option>
+        <option>CONVÊNIO</option>
+        <option>PESSOAL E ENCARGOS SOCIAIS</option>
+        <option>OBRAS</option>
+        <option>OPERAÇÕES DE CRÉDITO</option>
+    </select>
+
+    <select name="Grau de Priorização" class="campo">
+        <option>Selecione</option>
+        <option>Grau Alto</option>
+        <option>Grau Médio/Alto</option>
+        <option>Grau Médio</option>
+        <option>Grau Médio/Baixo</option>
+        <option>Grau Baixo</option>
+    </select>
+    </div>
+
+    <button type="submit" name="submit" id="submit" class="btn btn-create-account">Fazer Contrato</button>  
+    <p class="texto-login">Cancelar</p>
+
+  </form>
+
+</body>
+</html>
