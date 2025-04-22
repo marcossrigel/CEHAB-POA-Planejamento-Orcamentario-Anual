@@ -10,11 +10,11 @@
 
 <body>
   <form class="formulario" action="cadastro.html" method="POST">
-    <h1>Formulário POA 2025</h1>
-    
-    <label class="label">Tema de Custo</label>
+    <h1>Formulário POA 2025</h1><br>
     <div class="linha">
-        <select name="TemaCusto" id="1" class="campo">
+      <div class="campo-pequeno">
+        <label class="label">Tema de Custo</label>
+        <select name="TemaCusto" class="campo">
             <option>Selecione...</option>
             <option>01 - Apoio Administrativo - Estagiários</option>
             <option>02 - Combustível/Manutenção de Veículos</option>
@@ -47,8 +47,12 @@
             <option>29 - Regularização Fundiária</option>
             <option>30 - Ouvidoria</option>
         </select>
-        
-        <select name="SetorResponsavel" id="2" class="campo">
+      </div>
+
+        <div class="campo-pequeno">
+        <label class="label">Setor Responsavel</label>
+        <select name="SetorResponsavel" class="campo">
+            <option>Selecione</option>
             <option>DAF (GAD)</option>
             <option>DOB</option>
             <option>DOE</option>
@@ -57,11 +61,18 @@
             <option>DPH</option>
             <option>SAJ</option>
         </select>
+      </div>
 
-        <input type="text" name="GestorResponsavel" placeholder="Digite o nome do Gestor" class="campo">
+      <div class="campo-pequeno">
+      <label class="label">Gestor Responsavel</label>
+      <input type="text" name="GestorResponsavel" placeholder="Digite o nome do Gestor" class="campo">
+      </div>
     </div>
     
     <br>
+    
+    <div class="linha">
+    <div class="campo-pequeno">
     <label class="label">Status</label>
         <div class="linha">
         <select name="Status" id="" class="campo">
