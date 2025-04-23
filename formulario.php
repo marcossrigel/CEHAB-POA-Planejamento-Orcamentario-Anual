@@ -10,7 +10,9 @@
 
 <body>
   <form class="formulario" action="cadastro.html" method="POST">
-    <h1>Formulário POA 2025</h1><br>
+    <h1>Formulário POA 2025</h1>
+    <hr>
+    <br>
     <div class="linha">
       <div class="campo-pequeno">
         <label class="label">Tema de Custo</label>
