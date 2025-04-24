@@ -1,7 +1,34 @@
 <?php
+if (isset($_POST['submit'])) {
 
-  if(isset($_POST['submit']))
-  {
+  $erros = [];
+
+  function campoInvalido($valor) {
+    return $valor === 'Selecione...';
+  }
+
+  if (campoInvalido($_POST['tema_custo'])) $erros[] = "Tema de Custo é obrigatório.";
+  if (campoInvalido($_POST['setor_responsavel'])) $erros[] = "Setor Responsável é obrigatório.";
+  if (campoInvalido($_POST['status_contrato'])) $erros[] = "Status do Contrato é obrigatório.";
+  if (campoInvalido($_POST['dea'])) $erros[] = "DEA é obrigatório.";
+  if (campoInvalido($_POST['reajuste'])) $erros[] = "Reajuste é obrigatório.";
+  if (campoInvalido($_POST['fonte'])) $erros[] = "Fonte é obrigatória.";
+  if (campoInvalido($_POST['grupo'])) $erros[] = "Grupo é obrigatório.";
+  if (campoInvalido($_POST['acao'])) $erros[] = "Ação é obrigatória.";
+  if (campoInvalido($_POST['sub_acao'])) $erros[] = "Sub-Ação é obrigatória.";
+  if (campoInvalido($_POST['ficha_financeira'])) $erros[] = "Ficha Financeira é obrigatória.";
+  if (campoInvalido($_POST['macro_tema'])) $erros[] = "Macro Tema é obrigatório.";
+  if (campoInvalido($_POST['grau_priorizacao'])) $erros[] = "Grau de Priorização é obrigatório.";
+
+  if (count($erros) > 0) {
+    foreach ($erros as $erro) {
+      echo "<p style='color: red;'>$erro</p>";
+    }
+    echo '<a href="formulario.php">Voltar</a>';
+    exit;
+  }
+  else {
+
     include_once('config.php');
 
     $TemaCusto = $_POST['tema_custo'];
@@ -22,10 +49,24 @@
     $MacroTema = $_POST['macro_tema'];
     $GrauPriorizacao = $_POST['grau_priorizacao'];
 
-    $result = mysqli_query($conexao, "INSERT INTO formulariopoa(tema_custo,setor_responsavel,gestor_responsavel,status_contrato,numero_contrato,nome_credor,vigencia,dea,reajuste,fonte,grupo,objeto_atividade,acao,sub_acao,ficha_financeira,macro_tema,grau_priorizacao)
-    VALUES ('$TemaCusto','$SetorResponsavel','$GestorResponsavel', '$Status','$NumeroContrato', '$NomeCredor', '$Vigencia', '$DEA', '$Reajuste', '$Fonte', '$Grupo', '$ObjetoAtividade', '$Acao', '$SubAcao', '$FichaFinanceira','$MacroTema','$GrauPriorizacao')");
+    $result = mysqli_query($conexao, "INSERT INTO formulariopoa(
+      tema_custo, setor_responsavel, gestor_responsavel, status_contrato, numero_contrato,
+      nome_credor, vigencia, dea, reajuste, fonte, grupo, objeto_atividade, acao, sub_acao,
+      ficha_financeira, macro_tema, grau_priorizacao
+    ) VALUES (
+      '$TemaCusto', '$SetorResponsavel', '$GestorResponsavel', '$Status', '$NumeroContrato',
+      '$NomeCredor', '$Vigencia', '$DEA', '$Reajuste', '$Fonte', '$Grupo', '$ObjetoAtividade',
+      '$Acao', '$SubAcao', '$FichaFinanceira', '$MacroTema', '$GrauPriorizacao'
+    )");
+
+    if ($result) {
+      echo "<p style='color: green;'>Contrato cadastrado com sucesso!</p>";
+    } else {
+      echo "<p style='color: red;'>Erro ao cadastrar: " . mysqli_error($conexao) . "</p>";
+    }
   }
 
+}
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +125,7 @@
         <div class="campo-pequeno">
         <label class="label">Setor Responsavel</label>
         <select name="setor_responsavel" class="campo">
-            <option>Selecione</option>
+            <option>Selecione...</option>
             <option>DAF (GAD)</option>
             <option>DOB</option>
             <option>DOE</option>
@@ -105,7 +146,7 @@
       <div class="campo-pequeno">
         <label class="label">Status</label>
         <select name="status_contrato" class="campo">
-            <option>Selecione</option>
+            <option>Selecione...</option>
             <option>Continuidade</option>
             <option>Novo</option>
         </select>
@@ -131,7 +172,7 @@
       <div class="campo-pequeno">
         <label class="label">DEA</label>
         <select name="dea" id="" class="campo">
-            <option>Selecione</option>
+            <option>Selecione...</option>
             <option>Sim</option>
             <option>Não</option>
         </select>
@@ -140,7 +181,7 @@
       <div class="campo-pequeno">
         <label class="label">Reajuste</label>
         <select name="reajuste" id="" class="campo">
-            <option>Selecione</option>
+            <option>Selecione...</option>
             <option>Sim</option>
             <option>Não</option>
         </select>
@@ -149,7 +190,7 @@
       <div class="campo-pequeno">
         <label class="label">Fonte</label>
         <select name="fonte" id="" class="campo">
-            <option>Selecione</option>
+            <option>Selecione...</option>
             <option>0500 - (Tesouro do Estado)</option>
             <option>0700 - (Repasse de Convênio)</option>
             <option>0754 - (Operação de Crédito)</option>
@@ -159,7 +200,7 @@
       <div class="campo-pequeno">
         <label class="label">Grupo</label>
         <select name="grupo" id="" class="campo">
-            <option>Selecione</option>
+            <option>Selecione...</option>
             <option>3 - Despesa Corrente</option>
             <option>4 - Investimentos</option>
         </select>
@@ -239,7 +280,7 @@
     <div class="campo-pequeno">
       <label class="label">Ficha Financeira</label>
         <select name="ficha_financeira" class="campo">
-        <option>Selecione</option>
+        <option>Selecione...</option>
         <option>G3 - Água e Esgoto</option>
         <option>G3 - Apoio Administrativo - Estagiários</option>
         <option>G3 - Auxílio Funeral</option>
@@ -280,7 +321,7 @@
     <div class="campo-pequeno">
       <label class="label">Macro Tema</label>
     <select name="macro_tema" class="campo">
-        <option>Selecione</option>
+        <option>Selecione...</option>
         <option>SUPORTE A GESTÃO</option>
         <option>MÃO DE OBRA TERCEIRIZADA</option>
         <option>OUTROS</option>
@@ -296,7 +337,7 @@
     <div class="campo-pequeno">
       <label class="label">Grau de Priorização</label>
       <select name="grau_priorizacao" class="campo">
-        <option>Selecione</option>
+        <option>Selecione...</option>
         <option>Grau Alto</option>
         <option>Grau Médio/Alto</option>
         <option>Grau Médio</option>
