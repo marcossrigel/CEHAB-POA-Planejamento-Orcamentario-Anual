@@ -12,6 +12,7 @@
     $genero = $_POST['genero'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $usuario = $_POST['usuario'];
 
     $meses = [
       "jan" => "01", "fev" => "02", "mar" => "03", "abr" => "04",
@@ -21,7 +22,7 @@
     $mesConvertido = $meses[strtolower($mes)] ?? "01";
     $data_nascimento = "$ano-$mesConvertido-$dia";
 
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, sobrenome, data_nascimento, genero, email, senha) VALUES('$nome', '$sobrenome', '$data_nascimento', '$genero', '$email', '$senha')");
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, sobrenome, usuario, data_nascimento, genero, email, senha) VALUES('$nome', '$sobrenome','$usuario', '$data_nascimento', '$genero', '$email', '$senha')");
   }
 
 ?>
@@ -42,6 +43,7 @@
     <div class="linha">
       <input type="text" name="nome" placeholder="Nome" class="campo">
       <input type="text" name="sobrenome" placeholder="Sobrenome" class="campo">
+      <input type="text" name="usuario" placeholder="Usuário" class="campo">
     </div>
 
     <br>

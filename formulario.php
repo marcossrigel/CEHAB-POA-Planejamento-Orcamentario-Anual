@@ -238,7 +238,7 @@
   <div class="linha">
     <div class="campo-pequeno">
       <label class="label">Ficha Financeira</label>
-    <select name="ficha_financeira" class="campo">
+        <select name="ficha_financeira" class="campo">
         <option>Selecione</option>
         <option>G3 - Água e Esgoto</option>
         <option>G3 - Apoio Administrativo - Estagiários</option>
@@ -295,7 +295,7 @@
 
     <div class="campo-pequeno">
       <label class="label">Grau de Priorização</label>
-    <select name="grau_priorizacao" class="campo">
+      <select name="grau_priorizacao" class="campo">
         <option>Selecione</option>
         <option>Grau Alto</option>
         <option>Grau Médio/Alto</option>

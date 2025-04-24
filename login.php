@@ -26,7 +26,7 @@
       <form class="content-login-box">
         <div class="input-wrapper">
           <span class="material-icons">mail</span>
-          <input type="text" class="inputs" placeholder="E-mail ou telefone" id="login">
+          <input type="text" class="inputs" placeholder="E-mail ou Usuário" id="login">
         </div>
 
         <div class="input-wrapper">
