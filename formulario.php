@@ -221,7 +221,7 @@ if (isset($_POST['submit'])) {
                 <option>Selecione...</option>
                 <option>2904 - Formulação e Promoção Da Política de Regularização Fundiária</option>
                 <option>2928 - Conservação do Patrimônio Público na Companhia Estadual de Habilitação e Obras - CEHAB</option>
-                <option>2998 - Encargos Gerais da Companhia Estadual de Habilitação e Obras - CEHAB</option>
+                <option value="">2998 - Encargos Gerais da Companhia Estadual de Habitação e Obras - CEHAB</option>
                 <option>3902 - Fomento e Apoio ao Conselho Estadual de Habilitação de Interesse Social - CEHIS</option>
                 <option>3927 - Manutenção da Ouvidoria da Companhia Estadual de Habilitação e Obras - CEHAB</option>
                 <option>4058 - Ampliação da Oferta e Requalificação de Habitação de Interesse Social</option>
@@ -268,7 +268,7 @@ if (isset($_POST['submit'])) {
               <option>B667 - Pestação de serviços de motorista na CEHAB</option>
               <option>B668 - Despesas com publicações oficiais da CEHAB em diário oficial</option>
               <option>B669 - Pagamento de apenados em processo de ressocialização na CEHAB</option>
-              <option>B970 - Prestação de serviços de segurança pessoal e patrimonial na CEHAB</option>
+              <option>B670 - Prestação de serviços de segurança pessoal e patrimonial na CEHAB</option>
             </select>
           </div>
         </div>
@@ -380,32 +380,92 @@ if (isset($_POST['submit'])) {
         fichaFinanceira.value = "G3 - Outros";
       }
 
+      if (this.value === "15 - Vigilância Ostensiva") {
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesa Corrente";
+        acao.value = "2928 - Conservação do Patrimônio Público na Companhia Estadual de Habilitação e Obras - CEHAB";
+        subAcao.value = "B670 - Prestação de serviços de segurança pessoal e patrimonial na CEHAB";
+        fichaFinanceira.value = "G3 - Vigilância Ostensiva";
+      }
+
       if (this.value === "05 - Limpeza e Conservação") {
-        
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesa Corrente";
+        acao.value = "2928 - Conservação do Patrimônio Público na Companhia Estadual de Habilitação e Obras - CEHAB";
+        subAcao.value = "B665 - Prestação de serviços de limpeza e conservação da CEHAB";
+        fichaFinanceira.value = "G3 - Limpeza e Conservação";
       }
 
       if (this.value === "21 - Outros") {
-        
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesa Corrente";
+        acao.value = "2998 - Encargos Gerais da Companhia Estadual de Habitação e Obras - CEHAB";
+        subAcao.value = "0000 - OUTRAS MEDIDAS";
+        fichaFinanceira.value = "G3 - Outros";
       }
 
       if (this.value === "30 - Ouvidoria") {
-        
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesa Corrente";
+        acao.value = "3927 - Manutenção da Ouvidoria da Companhia Estadual de Habitação e Obras - CEHAB";
+        subAcao.value = "0000 - OUTRAS MEDIDAS";
+        fichaFinanceira.value = "G3 - Outros";
       }
 
       if (this.value === "31 - FINHIS") {
-        
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "4 - Investimentos";
+        acao.value = "4058 - Ampliação da Oferta e Requalificação de Habitação de Interesse Social";
+        subAcao.value = "0055 - Programa Minha Casa (Operações Coletivas, CAIC,FNHIS e PSH)- Conclusão da construção de moradias";
+        fichaFinanceira.value = "G4 - Devolução - Recursos do Concedente";
       }
 
       if (this.value === "32 - Minha Casa Minha Vida") {
-        
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "4 - Investimentos";
+        acao.value = "4058 - Ampliação da Oferta e Requalificação de Habitação de Interesse Social";
+        subAcao.value = "0865 - Operacionalização do Programa Minha Casa Minha Vida";
+        fichaFinanceira.value = "G4 - Minha Casa Minha Vida";
       }
 
       if (this.value === "26 - Obras") {
-        
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "4 - Investimentos";
+        acao.value = "4300 - Execução de Obras de Infraestrutura e de Urbanização";
+        subAcao.value = "0000 - OUTRAS MEDIDAS";
+        fichaFinanceira.value = "G4 - Obra";
       }
 
-      if (this.value === "27 - Gerenciamento") {
-        
+      if (this.value === "16 - Auxílio Moradia") {
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesas Correntes";
+        acao.value = "4300 - Execução de Obras de Infraestrutura e de Urbanização";
+        subAcao.value = "2794 - Auxílio Moradia - CEHAB";
+        fichaFinanceira.value = "G3 - Auxílio Moradia";
+      }
+
+      if (this.value === "28 - Projeto de Obras") {
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesas Correntes";
+        acao.value = "4300 - Execução de Obras de Infraestrutura e de Urbanização";
+        subAcao.value = "2794 - Auxílio Moradia - CEHAB";
+        fichaFinanceira.value = "G3 - Auxílio Moradia";
+      }
+
+      if (this.value === "27 - Gerenciamento de Obras") {
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "4 - Investimentos";
+        acao.value = "4300 - Execução de Obras de Infraestrutura e de Urbanização";
+        subAcao.value = "A389 - Execução das obras de infraestrutura e construção de unidades habitacionais no Canal do Jordão";
+        fichaFinanceira.value = "G4 - Supervisão de Obra";
+      }
+
+      if (this.value === "28 - Projetos de Obras") {
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "4 - Investimentos";
+        acao.value = "4300 - Execução de Obras de Infraestrutura e de Urbanização";
+        subAcao.value = "0000 - OUTRAS MEDIDAS";
+        fichaFinanceira.value = "G4 - Projeto de Obra";
       }
 
 
