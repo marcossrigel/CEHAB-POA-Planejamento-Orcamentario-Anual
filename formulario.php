@@ -353,4 +353,64 @@ if (isset($_POST['submit'])) {
   </form>
 
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const temaCusto = document.querySelector('select[name="tema_custo"]');
+    const fonte = document.querySelector('select[name="fonte"]');
+    const grupo = document.querySelector('select[name="grupo"]');
+    const acao = document.querySelector('select[name="acao"]');
+    const subAcao = document.querySelector('select[name="sub_acao"]');
+    const fichaFinanceira = document.querySelector('select[name="ficha_financeira"]');
+
+    temaCusto.addEventListener('change', function () {
+      if (this.value === "Selecione...") {
+        fonte.value = "Selecione...";
+        grupo.value = "Selecione...";
+        acao.value = "Selecione...";
+        subAcao.value = "Selecione...";
+        fichaFinanceira.value = "Selecione...";
+      }
+      
+      if (this.value === "29 - Regularização Fundiária") {
+        fonte.value = "0500 - (Tesouro do Estado)";
+        grupo.value = "3 - Despesa Corrente";
+        acao.value = "2904 - Formulação e Promoção Da Política de Regularização Fundiária";
+        subAcao.value = "0000 - OUTRAS MEDIDAS";
+        fichaFinanceira.value = "G3 - Outros";
+      }
+
+      if (this.value === "05 - Limpeza e Conservação") {
+        
+      }
+
+      if (this.value === "21 - Outros") {
+        
+      }
+
+      if (this.value === "30 - Ouvidoria") {
+        
+      }
+
+      if (this.value === "31 - FINHIS") {
+        
+      }
+
+      if (this.value === "32 - Minha Casa Minha Vida") {
+        
+      }
+
+      if (this.value === "26 - Obras") {
+        
+      }
+
+      if (this.value === "27 - Gerenciamento") {
+        
+      }
+
+
+    });
+  });
+</script>
+
 </html>
