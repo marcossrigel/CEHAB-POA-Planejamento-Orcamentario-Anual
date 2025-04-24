@@ -2,22 +2,6 @@
 
   if(isset($_POST['submit']))
   {
-    // print_r($_POST['nome']);
-    // print_r('<br>');
-    // print_r($_POST['sobrenome']);
-    // print_r('<br>');
-    // print_r($_POST['dia']);
-    // print_r('<br>');
-    // print_r($_POST['mes']);
-    // print_r('<br>');
-    // print_r($_POST['ano']);
-    // print_r('<br>');
-    // print_r($_POST['genero']);
-    // print_r('<br>');
-    // print_r($_POST['email']);
-    // print_r('<br>');
-    // print_r($_POST['senha']);
-
     include_once('config.php');
 
     $nome = $_POST['nome'];
@@ -209,7 +193,7 @@
     <button type="submit" name="submit" id="submit" class="btn btn-create-account">Criar nova conta</button>
     
     <p class="texto-login">
-      <a href="home.php">ou já possui uma conta?</a>
+      <a href="login.php">ou já possui uma conta?</a>
     </p>
 
   </form>

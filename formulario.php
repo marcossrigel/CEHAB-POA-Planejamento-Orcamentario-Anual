@@ -1,3 +1,33 @@
+<?php
+
+  if(isset($_POST['submit']))
+  {
+    include_once('config.php');
+
+    $TemaCusto = $_POST['tema_custo'];
+    $SetorResponsavel = $_POST['setor_responsavel'];
+    $GestorResponsavel = $_POST['gestor_responsavel'];
+    $Status = $_POST['status_contrato'];
+    $NumeroContrato = $_POST['numero_contrato'];
+    $NomeCredor = $_POST['nome_credor'];
+    $Vigencia = $_POST['vigencia'];
+    $DEA = $_POST['dea'];
+    $Reajuste = $_POST['reajuste'];
+    $Fonte = $_POST['fonte'];
+    $Grupo = $_POST['grupo'];
+    $ObjetoAtividade = $_POST['objeto_atividade'];
+    $Acao = $_POST['acao'];
+    $SubAcao = $_POST['sub_acao'];
+    $FichaFinanceira = $_POST['ficha_financeira'];
+    $MacroTema = $_POST['macro_tema'];
+    $GrauPriorizacao = $_POST['grau_priorizacao'];
+
+    $result = mysqli_query($conexao, "INSERT INTO formulariopoa(tema_custo,setor_responsavel,gestor_responsavel,status_contrato,numero_contrato,nome_credor,vigencia,dea,reajuste,fonte,grupo,objeto_atividade,acao,sub_acao,ficha_financeira,macro_tema,grau_priorizacao)
+    VALUES ('$TemaCusto','$SetorResponsavel','$GestorResponsavel', '$Status','$NumeroContrato', '$NomeCredor', '$Vigencia', '$DEA', '$Reajuste', '$Fonte', '$Grupo', '$ObjetoAtividade', '$Acao', '$SubAcao', '$FichaFinanceira','$MacroTema','$GrauPriorizacao')");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,14 +39,14 @@
 </head>
 
 <body>
-  <form class="formulario" action="cadastro.html" method="POST">
+  <form class="formulario" action="formulario.php" method="POST">
     <h1>Formulário POA 2025</h1>
     <hr>
     <br>
     <div class="linha">
       <div class="campo-pequeno">
         <label class="label">Tema de Custo</label>
-        <select name="TemaCusto" class="campo">
+        <select name="tema_custo" class="campo">
             <option>Selecione...</option>
             <option>01 - Apoio Administrativo - Estagiários</option>
             <option>02 - Combustível/Manutenção de Veículos</option>
@@ -53,7 +83,7 @@
 
         <div class="campo-pequeno">
         <label class="label">Setor Responsavel</label>
-        <select name="SetorResponsavel" class="campo">
+        <select name="setor_responsavel" class="campo">
             <option>Selecione</option>
             <option>DAF (GAD)</option>
             <option>DOB</option>
@@ -67,14 +97,14 @@
 
       <div class="campo-pequeno">
       <label class="label">Gestor Responsavel</label>
-      <input type="text" name="GestorResponsavel" placeholder="Digite o nome do Gestor" class="campo">
+      <input type="text" name="gestor_responsavel" placeholder="Digite o nome do Gestor" class="campo">
       </div>
     </div>
     
     <div class="linha">
       <div class="campo-pequeno">
         <label class="label">Status</label>
-        <select name="Status" class="campo">
+        <select name="status_contrato" class="campo">
             <option>Selecione</option>
             <option>Continuidade</option>
             <option>Novo</option>
@@ -83,24 +113,24 @@
 
       <div class="campo-pequeno">
         <label class="label">Nº do Contrato</label>
-        <input type="text" name="NumeroContrato" placeholder="Digite o número do contrato" class="campo">
+        <input type="text" name="numero_contrato" placeholder="Digite o número do contrato" class="campo">
       </div>
     
       <div class="campo-pequeno">
         <label class="label">Nome do Credor</label>
-        <input type="text" name="NomeCredor" placeholder="Digite o nome do credor" class="campo">
+        <input type="text" name="nome_credor" placeholder="Digite o nome do credor" class="campo">
       </div>
     
       <div class="campo-pequeno">
         <label class="label">Vigência</label>
-        <input type="text" name="VigenciaContrato" placeholder="Digite a vigência do contrato" class="campo">
+        <input type="text" name="vigencia" placeholder="Digite a vigência do contrato" class="campo">
       </div>
     </div>
 
     <div class="linha">
       <div class="campo-pequeno">
         <label class="label">DEA</label>
-        <select name="DEA" id="" class="campo">
+        <select name="dea" id="" class="campo">
             <option>Selecione</option>
             <option>Sim</option>
             <option>Não</option>
@@ -109,7 +139,7 @@
 
       <div class="campo-pequeno">
         <label class="label">Reajuste</label>
-        <select name="Reajuste" id="" class="campo">
+        <select name="reajuste" id="" class="campo">
             <option>Selecione</option>
             <option>Sim</option>
             <option>Não</option>
@@ -118,7 +148,7 @@
 
       <div class="campo-pequeno">
         <label class="label">Fonte</label>
-        <select name="Fonte" id="" class="campo">
+        <select name="fonte" id="" class="campo">
             <option>Selecione</option>
             <option>0500 - (Tesouro do Estado)</option>
             <option>0700 - (Repasse de Convênio)</option>
@@ -128,7 +158,7 @@
 
       <div class="campo-pequeno">
         <label class="label">Grupo</label>
-        <select name="Grupo" id="" class="campo">
+        <select name="grupo" id="" class="campo">
             <option>Selecione</option>
             <option>3 - Despesa Corrente</option>
             <option>4 - Investimentos</option>
@@ -139,14 +169,14 @@
     <div class="linha-atividade">
         <div class="coluna-textarea">
           <label class="label">Objeto / Atividade</label>
-          <textarea id="atividade" name="atividade" placeholder="Digite o objeto ou atividade"></textarea>
+          <textarea id="" name="objeto_atividade" placeholder="Digite o objeto ou atividade"></textarea>
         </div>
       
         <div class="coluna-campos">
 
           <div class="campo-pequeno">
             <label class="label">Ação</label>
-            <select id="dea" name="dea">
+            <select id="acao" name="acao">
                 <option>Selecione...</option>
                 <option>2904 - Formulação e Promoção Da Política de Regularização Fundiária</option>
                 <option>2928 - Conservação do Patrimônio Público na Companhia Estadual de Habilitação e Obras - CEHAB</option>
@@ -164,7 +194,7 @@
       
           <div class="campo-pequeno">
             <label class="label">Sub-Ação</label>
-            <select id="dea" name="dea">
+            <select id="dea" name="sub_acao">
               <option>Selecione...</option>
               <option>0000 - OUTRAS MEDIDAS</option>
               <option>0050 - Programa Minha Casa (Operações Coletivas, CAIC, FNHIS e PSH) - Conclusão de moradias</option>
@@ -208,7 +238,7 @@
   <div class="linha">
     <div class="campo-pequeno">
       <label class="label">Ficha Financeira</label>
-    <select name="FichaFinanceira" class="campo">
+    <select name="ficha_financeira" class="campo">
         <option>Selecione</option>
         <option>G3 - Água e Esgoto</option>
         <option>G3 - Apoio Administrativo - Estagiários</option>
@@ -249,7 +279,7 @@
 
     <div class="campo-pequeno">
       <label class="label">Macro Tema</label>
-    <select name="Macro Tema" class="campo">
+    <select name="macro_tema" class="campo">
         <option>Selecione</option>
         <option>SUPORTE A GESTÃO</option>
         <option>MÃO DE OBRA TERCEIRIZADA</option>
@@ -265,7 +295,7 @@
 
     <div class="campo-pequeno">
       <label class="label">Grau de Priorização</label>
-    <select name="Grau de Priorização" class="campo">
+    <select name="grau_priorizacao" class="campo">
         <option>Selecione</option>
         <option>Grau Alto</option>
         <option>Grau Médio/Alto</option>
@@ -276,7 +306,7 @@
     </div>
   </div>
 
-    <button type="submit" name="submit" id="submit" class="btn btn-create-account">Fazer Contrato</button>  
+    <button type="submit" name="submit" id="submit" class="btn btn-create-account">Fazer Contrato</button>
     <p class="texto-login">Cancelar</p>
 
   </form>

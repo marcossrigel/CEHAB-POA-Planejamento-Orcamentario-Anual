@@ -6,39 +6,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>POA - Planejamento Orçamentário Anual</title>
+  <title>POA - Home</title>
   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
   <div class="content">
-    
     <div class="content-info">
-      <h1>Planejamento<br>Orçamentário Anual</h1>
-      <div class="logos">
-        <img src="cehab_logo.png" alt="CEHAB" class="logo">
-        <img src="gov-pe-logo.png" alt="Governo de PE" class="logo">
-      </div>
-    </div>
-    
-    <div class="content-login">
-      <form class="content-login-box">
-        <div class="input-wrapper">
-          <span class="material-icons">mail</span>
-          <input type="text" class="inputs" placeholder="E-mail ou telefone">
-        </div>
-        <div class="input-wrapper">
-          <span class="material-icons">lock</span>
-          <input type="password" class="inputs" placeholder="Senha">
-        </div>
-        <button class="btn btn-enter">Entrar</button>
-        <a href="#" class="forgot-password">Esqueceu a senha?</a>
-        <hr>
-        <button type="button" onclick="window.location.href='cadastro.php'" class="btn btn-create-account">
-          Criar nova conta
-        </button>
-      </form>
+      <h1>Parabéns você esta na tela de home!</h1>
     </div>
 
   </div>
