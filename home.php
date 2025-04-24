@@ -1,4 +1,4 @@
-<!-- http://localhost/poa/home.php -->
+<!-- http://localhost/poa/login.php -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,6 +15,7 @@
   <div class="content">
     <div class="content-info">
       <h1>Parabéns você esta na tela de home!</h1>
+
     </div>
 
   </div>
